@@ -1,5 +1,49 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
-  color: navajowhite;
-  background-color: #700d2e;
+  color: slateblue;
+  background-color: whitesmoke;
+}
+
+.container {
+  display: flex;
+  margin-top: 30vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid_square {
+  border: solid 1px slategrey;
+  min-width: 15px;
+  min-height: 15px;
+  flex: 0;
+}
+
+.top_edge {
+  border-top-color: black;
+  border-top-width: 2px;
+}
+
+.bottom_edge {
+  border-bottom-color: black;
+  border-bottom-width: 2px;
+
+}
+
+.left_edge {
+  border-left-color: black;
+  border-left-width: 2px;
+
+}
+
+.right_edge {
+  border-right-color: black;
+  border-right-width: 2px;
+
 }
