@@ -30,11 +30,19 @@ for (i = 0; i < GRID_SIDE; i++) {
 
 const grid_squares = document.querySelectorAll('.grid_square');
 grid_squares.forEach(grid_square => {
-  grid_square.addEventListener('mouseenter', change_color);
+  grid_square.addEventListener('mouseenter', rainbow_mode);
 })
 
-function change_color(e) {
-  console.log(e);
+
+function black_mode(e) {
+  const grid_square = e.target;
+  let new_color = 'black'
+  grid_square.style['background-color'] = new_color;
+}
+  
+
+
+function shading_mode(e) {
   const grid_square = e.target;
   let current_color = grid_square.style['background-color'];
   let new_color;
@@ -48,4 +56,23 @@ function change_color(e) {
     
   }
   grid_square.style['background-color'] = new_color;
+}
+
+function rainbow_mode(e) {
+  const grid_square = e.target;
+  let current_color = grid_square.style.backgroundColor;
+  if (current_color == 'white') {
+    let r = clamp(Math.random() * 255, 120, 255);
+    let g = clamp(Math.random() * 255, 120, 255);
+    let b = clamp(Math.random() * 255, 120, 255);
+    let new_color = `rgb(${r}, ${g}, ${b})`;
+    grid_square.style.backgroundColor = new_color;
+  }
+}
+
+
+function clamp(number, lower, upper) {
+    let result = Math.max(number, lower);
+    result = Math.min(result, upper);
+    return result;
 }
