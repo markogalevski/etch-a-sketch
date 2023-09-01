@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Material Icons Two Tone
+- Font Author: Copyright 2019 Google, Inc. All Rights Reserved.
+- Font Source: http://fonts.gstatic.com/s/materialiconstwotone/v112/hESh6WRmNCxEqUmNyh3JDeGxjVVyMg4tHGctNCu3NjDrH_77.otf
+- Font License: Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html))
