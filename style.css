@@ -4,25 +4,44 @@
   background-color: whitesmoke;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+h1 {
+  margin: 3px;
+}
+
+
 .container {
   display: flex;
-  margin-top: 30vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 540px;
 }
 
 .row_container {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
+  width: 540px;
+  min-height: 5px;
+  flex: auto;
 }
 
 .grid_square {
   border: solid 1px slategrey;
-  min-width: 15px;
-  min-height: 15px;
-  flex: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex: auto;
 }
 
 .top_edge {
@@ -46,4 +65,44 @@
   border-right-color: black;
   border-right-width: 2px;
 
+}
+
+.button_row {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+
+button {
+  border-radius: 4px;
+  padding: 12px 10px;
+  font-weight: bolder;
+  margin: 0;
+  box-shadow: none;
+}
+
+.black {
+  color: black;
+}
+
+.rainbow {
+  background: linear-gradient(to right, red, yellow 35%, limegreen 50%, royalblue 90%, purple);
+  background-clip: text;
+  /*add this line, it defines how far the background should extend within an element, here we set it to text */
+  -webkit-background-clip: text;
+  /* add this line, for browsers compatibility */
+  -webkit-text-fill-color: transparent;
+}
+
+.shading {
+  background: linear-gradient(to right, lightgray, black);
+  background-clip: text;
+  /*add this line, it defines how far the background should extend within an element, here we set it to text */
+  -webkit-background-clip: text;
+  /* add this line, for browsers compatibility */
+  -webkit-text-fill-color: transparent;
 }
